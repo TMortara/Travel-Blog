@@ -1,0 +1,39 @@
+{
+  "name": "travel-blog",
+  "version": "1.0.0",
+  "description": "place to store your travels",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TMortara/Travel-Blog.git"
+  },
+  "keywords": [
+    "travel",
+    "itinerary",
+    "social"
+  ],
+  "author": "Group 8",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TMortara/Travel-Blog/issues"
+  },
+  "homepage": "https://github.com/TMortara/Travel-Blog#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "connect-session-sequelize": "^7.1.5",
+    "dotenv": "^16.0.3",
+    "express-handlebars": "^6.0.7",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.1.0",
+    "nodemon": "^2.0.20",
+    "sequelize": "^6.28.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "eslint": "^8.33.0"
+  }
+}
