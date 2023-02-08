@@ -1,17 +1,17 @@
-const router = require('express').Router();
-const sequelize = require('../config/connection');
-const { Trip, User, Comment } = require('../models');
+const router = require("express").Router();
+const sequelize = require("../config/connection");
+const { Trip, User, Comment } = require("../models");
 
-// GET all posts for homepage
-router.get('/', async (req, res) => {
+// GET all trips for homepage
+router.get("/", async (req, res) => {
   try {
-    const dbPostData = await Post.findAll({
-      attributes:['id','title','created_at','post_content'],
+    const dbTripData = await Trip.findAll({
+      attributes: ["id", "title", "created_at", "trip_content"],
       include: [
         /*
         {
           model: Comment,
-          attributes: ['id','comment_text','post_id','user_id','created_at'],
+          attributes: ['id','comment_text','trip_id','user_id','created_at'],
           include: {
             model: User,
             attributes: ['username']
@@ -20,22 +20,20 @@ router.get('/', async (req, res) => {
         */
         {
           model: User,
-          attributes: ['username']
-        }
+          attributes: ["username"],
+        },
       ],
     });
 
-    const posts = dbPostData.map((post) =>
-      post.get({ plain: true })
-    );
+    const trips = dbTripData.map((trip) => trip.get({ plain: true }));
 
     console.log("======================");
-    console.log(posts);
-    console.log(posts[0].id);
-    console.log(posts[0].title);
-    console.log(posts[0].post_content);
-    
-    // ./views/homepage.handlebars -> 
+    console.log(trips);
+    console.log(trips[0].id);
+    console.log(trips[0].title);
+    console.log(trips[0].trip_content);
+
+    // ./views/homepage.handlebars ->
     // ./views/layouts/main.handlebars
     /*
     res.render('homepage', {
@@ -43,28 +41,27 @@ router.get('/', async (req, res) => {
       loggedIn: req.session.loggedIn,
     });
     */
-    console.log('jw2');
-    res.render('homepage', {
-      posts
+    console.log("jw2");
+    res.render("homepage", {
+      posts,
     });
-    console.log('jw3');
+    console.log("jw3");
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
-  console.log('jw4');
+  console.log("jw4");
 });
 
-
 // Login route
-router.get('/login', (req, res) => {
+router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect("/");
     return;
   }
-  // ./views/login.handlebars -> 
+  // ./views/login.handlebars ->
   // ./views/layouts/main.handlebars
-  res.render('login');
+  res.render("login");
 });
 
 module.exports = router;
