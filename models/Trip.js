@@ -11,17 +11,28 @@ Trip.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        date: {
+        starting_date: {
             type: DataTypes.DATE,
             allowNull: false,
         },
-        country: {
+        ending_date: {
+            type: DataTypes.DATE,
+            allowNull: false,
+         },
+        country_name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
         description: {
             type: DataTypes.STRING,
             allowNull: true,
+        },
+        user_id: {
+            type: DataTypes.STRING,
+            references: {
+              model: 'user',
+              key: 'id',
+            },
         },
     },
     {
