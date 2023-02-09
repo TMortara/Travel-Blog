@@ -8,16 +8,14 @@ router.get("/", async (req, res) => {
     const dbTripData = await Trip.findAll({
       attributes: ["id", "title", "created_at", "trip_content"],
       include: [
-        /*
         {
           model: Comment,
-          attributes: ['id','comment_text','trip_id','user_id','created_at'],
+          attributes: ['id','user_id','trip_id','comment_text','created_at'],
           include: {
             model: User,
             attributes: ['username']
           }
         },
-        */
         {
           model: User,
           attributes: ["username"],
@@ -35,25 +33,17 @@ router.get("/", async (req, res) => {
 
     // ./views/homepage.handlebars ->
     // ./views/layouts/main.handlebars
-    /*
     res.render('homepage', {
-      posts,
+      trips,
       loggedIn: req.session.loggedIn,
     });
-    */
-    console.log("jw2");
-    res.render("homepage", {
-      posts,
-    });
-    console.log("jw3");
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
-  console.log("jw4");
 });
 
-// Login route
+// Login & Signup route
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/");
