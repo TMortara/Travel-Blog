@@ -8,6 +8,9 @@ class User extends Model {
   }
 }
 
+/* define "User" table:
+  [id, username, email, password]
+*/
 User.init(
     {
         id: {
@@ -15,6 +18,10 @@ User.init(
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
+        },
+        username: {
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         email: {
             type: DataTypes.STRING,
