@@ -5,7 +5,7 @@ const exphbs = require('express-handlebars');
 
 // Multer
 const multer = require('multer')
-const storage = multerdiskStorage({
+const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(console.error(), 'images')
   },
