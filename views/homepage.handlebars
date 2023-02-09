@@ -1,3 +1,4 @@
+<!-- This was the original...
 {{#each users as |user| }}
 <div class="row align-center mb-5">
   <div class="col-md-6">
@@ -7,4 +8,15 @@
     <h3><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
   </div>
 </div>
+{{/each}}
+-->
+
+<!-- this is the update by Jungwoo utilizing "partials" -->
+<!-- I will include "trip-info.handlebars" right away -->
+{{#each trips as |trip|}}
+
+<!-- Insert: views/partials/trip-info.handlebars-->
+{{> trip-info trip}}
+</div> <!-- this will close each trip's "div" -->
+
 {{/each}}
