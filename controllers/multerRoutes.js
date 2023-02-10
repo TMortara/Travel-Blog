@@ -11,7 +11,7 @@ const storage = multer.diskStorage({
     }
   })
   
-  const upload = multer({storage: storage})
+  const upload = multer({storage: storage});
 
 router.get('/upload', (req, res) => {
     res.render("upload")
