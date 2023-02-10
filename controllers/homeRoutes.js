@@ -6,9 +6,9 @@ const { Trip, User, Comment } = require("../models");
 router.get("/", async (req, res) => {
   try {
     const dbTripData = await Trip.findAll({
-      attributes: ["id", "title", "created_at", "trip_content"],
-      include: [
-        /*
+      // attributes: ["id", "title", "created_at", "trip_content"],
+      // include: [
+      /*
         {
           model: Comment,
           attributes: ['id','comment_text','trip_id','user_id','created_at'],
@@ -18,32 +18,32 @@ router.get("/", async (req, res) => {
           }
         },
         */
-        {
-          model: User,
-          attributes: ["username"],
-        },
-      ],
+      //   {
+      //     model: User,
+      //     attributes: ["username"],
+      //   },
+      // ],
     });
 
     const trips = dbTripData.map((trip) => trip.get({ plain: true }));
 
     console.log("======================");
     console.log(trips);
-    console.log(trips[0].id);
-    console.log(trips[0].title);
-    console.log(trips[0].trip_content);
+    // console.log(trips[0].id);
+    // console.log(trips[0].title);
+    // console.log(trips[0].trip_content);
 
     // ./views/homepage.handlebars ->
     // ./views/layouts/main.handlebars
-    /*
-    res.render('homepage', {
-      posts,
-      loggedIn: req.session.loggedIn,
-    });
-    */
+
+    // res.render('homepage', {
+    //   trips,
+    //   // loggedIn: req.session.loggedIn,
+    // });
+
     console.log("jw2");
     res.render("homepage", {
-      posts,
+      trips,
     });
     console.log("jw3");
   } catch (err) {
