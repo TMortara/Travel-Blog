@@ -6,6 +6,7 @@ const { Trip, User, Comment } = require("../models");
 router.get("/", async (req, res) => {
   try {
     const dbTripData = await Trip.findAll({
+
       attributes: ["id", "title", "created_at", "trip_content"],
       include: [
         {
@@ -27,12 +28,13 @@ router.get("/", async (req, res) => {
 
     console.log("======================");
     console.log(trips);
-    console.log(trips[0].id);
-    console.log(trips[0].title);
-    console.log(trips[0].trip_content);
+    // console.log(trips[0].id);
+    // console.log(trips[0].title);
+    // console.log(trips[0].trip_content);
 
     // ./views/homepage.handlebars ->
     // ./views/layouts/main.handlebars
+
     res.render('homepage', {
       trips,
       loggedIn: req.session.loggedIn,
