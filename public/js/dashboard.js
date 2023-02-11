@@ -4,7 +4,7 @@ const getTripEl = document.getElementById('get-trip')
 const addTrip = (event) => {
     event.preventDefault()
 
-    document.location.replace('/add-trip')
+    document.location.replace('/api/add-trip')
 }
 
 
@@ -12,7 +12,7 @@ const addTrip = (event) => {
 const getTrip = (event) => {
     event.preventDefault()
 
-    document.location.replace('/trip')
+    document.location.replace('api/trip')
 }
 
 console.log('Dashboard.js working')
