@@ -27,7 +27,7 @@ const loginFormHandler = async (event) => {
 
   // if successfully logged-in, send to: localhost:3001/dashboard
   if (response.ok) {
-    document.location.replace("/");
+    document.location.replace("/dashboard");
   } else {
     alert("Failed to log in.");
   }
@@ -51,7 +51,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/dashboard");
     } else {
       alert("Failed to sign up.");
     }
