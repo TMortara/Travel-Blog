@@ -12,7 +12,8 @@ router.get('/', withAuth, async (req, res) => {
       include: [
         {
           model: Comment,
-          attributes: ['id','user_id','trip_id','comment_text','created_at'],
+          //attributes: ['id','user_id','trip_id','comment_text','created_at'],
+          attributes:['id','title','location','trip_description','starting_date','ending_date','created_at'],
           include: {
             model: User,
             attributes: ['username']
@@ -45,7 +46,8 @@ router.get('/edit/:id', withAuth, async (req, res) => {
       include: [
         {
           model: Comment,
-          attributes: ['id','user_id','trip_id','comment_text','created_at'],
+          //attributes: ['id','user_id','trip_id','comment_text','created_at'],
+          attributes: ['id','title','created_at','location','trip_description'],
           include: {
             model: User,
             attributes: ['username']
@@ -74,7 +76,8 @@ router.get('/create/', withAuth, async (req, res) => {
   try {
     const dbTripData = await Trip.findAll({
       where: {user_id: req.session.user_id}, // use the ID from the session
-      attributes: ['id','title','created_at','trip_content'],
+      //attributes: ['id','title','created_at','trip_content'],
+      attributes: ['id','title','location','starting_date','ending_date','trip_content'],
       include: [
         {
           model: Comment,
