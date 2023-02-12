@@ -3,21 +3,35 @@ const { Trip } = require('../models');
 const tripdata = [
    {
       title: "Austin",
-      post_content: "Austin is a hill country.",
+      location: "Austin, Texas",
+      trip_description: "Austin is a hill country.",
+      starting_date: "2022-03-06",
+      ending_date: "2022-03-10",
       user_id: 1
   },
   {
       title: "Vist Korea",
-      post_content: "Korea is a small but beautiful country",
+      location: "Korea",
+      trip_description: "10 day trip around Korea; Korea is a small but beautiful country",
+      starting_date: "2021-01-01",
+      ending_date: "2021-01-11",
       user_id: 2
   },
   {
       title: "Yosemite National Park",
-      post_content: "You will touch the blue sky here in Yosemite!",
+      location: "California",
+      trip_description: "You will touch the blue sky here in Yosemite!",
+      starting_date: "2021-05-06",
+      ending_date: "2021-05-12",
       user_id: 3
   },
   {
-    title: "New Zealand"
+    title: "Going Down Under",
+    location: "New Zealand",
+    trip_description: "Travel to down under to visit both islands.",
+    starting_date: "2022-01-30",
+    ending_date: "2022-02-23",
+    user_id: 1
   }
 ]
 const seedTrips = () => Trip.bulkCreate(tripdata);
