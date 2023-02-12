@@ -5,6 +5,7 @@ const exphbs = require('express-handlebars');
 
 // Multer
 const multer = require('multer')
+const bodyparser = require('body-parser')
 
 // Initializes Sequelize with session store
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -49,6 +50,14 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+
+// This is just for multer image uploading, may not be necessary
+// doesn't break anything on its own so I'm going to leave it for now
+app.use(bodyparser.json())
+app.use(bodyparser.urlencoded({
+    extended: true
+}))
 
 console.log('jw1');
 app.use(routes); // call ./controllers/index.js
