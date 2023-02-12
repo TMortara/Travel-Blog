@@ -6,7 +6,7 @@ const withAuth = require('../../utils/auth');
 // get all users
 router.get('/', (req, res) => {
   Trip.findAll({
-    attributes: ['id','title','created_at','trip_content'],
+    attributes: ['id','title','created_at','trip_description'],
     order: [['created_at', 'DESC']],
     include: [
       // Comment model here -- attached username to comment
@@ -34,7 +34,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   Trip.findOne({
     where: {id: req.params.id},
-    attributes: ['id','title','created_at','trip_content'],
+    attributes: ['id','title','created_at','trip_description'],
     include: [
       // include the Comment model here:
       {
@@ -67,7 +67,10 @@ router.get('/:id', (req, res) => {
 router.post('/', withAuth, (req, res) => {
   Trip.create({
     title: req.body.title,
-    trip_content: req.body.trip_content,
+    location: req.body.location,
+    starting_date: req.body.starting_date,
+    ending_date: req.body.ending_date,
+    trip_description: req.body.trip_description,
     user_id: req.session.user_id
   })
   .then(dbTripData => res.json(dbTripData))
@@ -80,7 +83,10 @@ router.post('/', withAuth, (req, res) => {
 router.put('/:id', withAuth, (req, res) => {
   Trip.update({
     title: req.body.title,
-    trip_content: req.body.trip_content
+    location: req.body.location,
+    starting_date: req.body.starting_date,
+    ending_date: req.body.ending_date,
+    trip_description: req.body.trip_description,
   },
   {
     where: {id: req.params.id}
