@@ -2,6 +2,7 @@ const User = require('./User');
 const Trip = require('./Trip');
 const Comment = require('./Comment');
 const Daily = require('./Daily');
+const Image = require('./Image')
 
 Trip.belongsTo(User,{
    foreignKey: 'user_id'
@@ -34,5 +35,10 @@ User.hasMany(Trip,{
  Trip.hasMany(Daily, {
    foreignKey: 'trip_id'
  });
+
+ Image.belongsTo(Daily, {
+   foreignKey: 'daily_id'
+ });
+
  
-module.exports = { User, Trip, Comment };
+module.exports = { User, Trip, Comment, Daily };
