@@ -9,6 +9,6 @@ router.use('/comment', commentRoutes);
 router.use('/trip', tripRoutes);
 router.use('/users', userRoutes);
 router.use('/add-trip', addTripRoutes);
-router.use('/daily', dailyRoutes);
+router.use('/add-daily-log', dailyRoutes);
 
 module.exports = router;
