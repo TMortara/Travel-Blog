@@ -27,8 +27,8 @@ const loginFormHandler = async (event) => {
   
 console.log("Email: ", email, "Password: ", password);
 
- };
-}
+ }
+};
 
 document
   .querySelector('.login-form')

@@ -3,7 +3,6 @@ const sequelize = require('../config/connection');
 const { User, Trip, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
-
 router.get('/', withAuth, async (req, res) => {
   try {
     const dbTripData = await Trip.findAll({
@@ -71,7 +70,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
   }
 });
 
-router.get('/create', withAuth, async (req, res) => {
+router.get('/create/', withAuth, async (req, res) => {
   try {
     const dbTripData = await Trip.findAll({
       where: {user_id: req.session.user_id}, // use the ID from the session

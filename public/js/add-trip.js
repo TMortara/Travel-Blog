@@ -19,12 +19,12 @@ async function newFormHandler(event) {
   
  document.querySelector('.new-trip-form').addEventListener('submit', newFormHandler);
 
-const cancelBtnEl = document.getElementById('cancel')
+const cancelBtnEl = document.getElementById('cancel');
 
 const cancel = (event) => {
     event.preventDefault()
 
-    document.location.replace('/api/trip')
+    document.location.replace('/api/trip');
 } 
 
-cancelBtnEl.addEventListener('click', cancel)
+cancelBtnEl.addEventListener('click', cancel);
