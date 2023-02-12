@@ -3,12 +3,24 @@
   <h2 class="title mt-5">Edit Your Trip:</h2><hr>
   <form class="edit-trip-form">
     <div>
-        <label for="trip-title">Trip Title:</label>
+      <label for="trip-title">What is the title of your trip?</label>
       <input class="input" name="trip-title" type="text" value="{{trip.title}}" />
     </div>
+      <div>
+      <label for="location">Where are you going?</label>
+      <input type="textarea" id="location" name="location" value="{{trip.location}}"/>
+    </div>
     <div>
-      <label for="trip-content">Trip Content:</label>
-      <input class="textarea" name="trip-content" type="text" value="{{trip.trip_description}}" />
+      <label for="starting-date">When do you leave for your trip?</label>
+      <input type="date" id="date" name="starting-date" value="{{trip.starting_date}}"/>
+    </div>
+     <div>
+      <label for="ending-date">When does your trip end?</label>
+      <input type="date" id="date" name="ending-date" value="{{trip.ending_date}}"/>
+    </div>
+    <div>
+      <label for="trip-description">Add a description for your trip:</label>
+      <input class="textarea" name="trip-description" type="text" value="{{trip.trip_description}}" />
     </div>
     <div class="is-pulled-right">
       Created by you on {{format_date trip.created_at}}
