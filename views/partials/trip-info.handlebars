@@ -5,6 +5,6 @@
         <!--
             Note: "format_date" is pulled from /utils/helpser.js
         -->
-        <P>Posted By: {{user.username}} | {{format_date created_at}}</P>
+        <P>Posted By: {{user.username}} | {{format_date created_at}} | <a href="/trip/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a></P>
     </div>
     
