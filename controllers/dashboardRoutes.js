@@ -70,11 +70,11 @@ router.get('/edit/:id', withAuth, async (req, res) => {
   }
 });
 
-router.get('/create/', withAuth, async (req, res) => {
+router.get('/create', withAuth, async (req, res) => {
   try {
     const dbTripData = await Trip.findAll({
       where: {user_id: req.session.user_id}, // use the ID from the session
-      attributes: ['id','title','location','starting_date','ending_date','trip_content'],
+      attributes: ['id','title','location','starting_date','ending_date','trip_description'],
       include: [
         {
           model: Comment,
