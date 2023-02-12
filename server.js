@@ -53,7 +53,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // This is just for multer image uploading, may not be necessary
-// doesn't break anything on its own so I'm going to leave it for now
+// doesn't break anything on its own so I'm going to leave it for now - riley
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({
     extended: true

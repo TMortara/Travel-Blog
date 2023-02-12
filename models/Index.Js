@@ -36,9 +36,9 @@ User.hasMany(Trip,{
    foreignKey: 'trip_id'
  });
 
- Image.belongsTo(Daily, {
-   foreignKey: 'daily_id'
- });
+//  Image.belongsTo(Daily, {
+//    foreignKey: 'daily_id'
+//  });
 
  
 module.exports = { User, Trip, Comment, Daily };
