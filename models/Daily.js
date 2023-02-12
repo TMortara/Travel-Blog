@@ -14,14 +14,14 @@ Daily.init(
         date_created: {
             type: DataTypes.DATE,
             allowNull: false,
-            defaultValue: DataTypes.NOW,
+            // defaultValue: DataTypes.NOW,
         },
         places_visited: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         daily_notes: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         trip_id: {
@@ -34,7 +34,7 @@ Daily.init(
     },
     {
         sequelize,
-        timestamps: false,
+        // timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'daily',
