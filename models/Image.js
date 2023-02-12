@@ -9,27 +9,30 @@ Image.init(
       id: {
          type: DataTypes.INTEGER,
          primaryKey: true,
-         file_src: DataTypes.TEXT,
-         autoIncrement: true
+         autoIncrement: true,
       },
 
-      user_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        references: {
-           model: 'user',
-           key: 'id'
-        }
-     },
+      file_src: {
+        type: DataTypes.TEXT
+      },
 
-     daily_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        references: {
-           model: 'daily',
-           key: 'id'
-        }
-     },
+//       user_id: {
+//         type: DataTypes.INTEGER,
+//         allowNull: false,
+//         references: {
+//            model: 'user',
+//            key: 'id'
+//         }
+//      },
+
+//      daily_id: {
+//         type: DataTypes.INTEGER,
+//         allowNull: false,
+//         references: {
+//            model: 'daily',
+//            key: 'id'
+//         }
+//      },
    },
    {
       sequelize,
