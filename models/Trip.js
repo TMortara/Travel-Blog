@@ -26,6 +26,14 @@ Trip.init(
             type: DataTypes.TEXT,
             allowNull: true
         },
+        starting_date: {
+            type: DataTypes.DATE,
+            allowNull: false,
+        },
+        ending_date: {
+            type: DataTypes.DATE,
+            allowNull: false,
+        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
