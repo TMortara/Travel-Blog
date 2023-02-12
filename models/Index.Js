@@ -35,4 +35,4 @@ User.hasMany(Trip,{
    foreignKey: 'trip_id'
  });
  
-module.exports = { User, Trip, Comment };
+module.exports = { User, Trip, Comment, Daily };

@@ -30,7 +30,7 @@ const tripdata = [
     location: "New Zealand",
     trip_description: "Travel to down under to visit both islands.",
     starting_date: "2022-01-30",
-    ending_date: "2022-02-23",
+    ending_date: "2022-02-15",
     user_id: 1
   }
 ]
