@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const multer = require('multer')
+const path = require('path')
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => { 
@@ -13,11 +14,11 @@ const storage = multer.diskStorage({
   
   const upload = multer({storage: storage});
 
-router.get('/upload', (req, res) => {
+router.get('/', (req, res) => {
     res.render("upload")
 })
 
-router.post('/upload', upload.single('image'), (req, res) => {
+router.post('/', upload.single("image"), (req, res) => {
     res.send('Image uploaded')
 })
 
