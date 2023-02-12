@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, DATE } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Trip extends Model {}
@@ -18,7 +18,11 @@ Trip.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        trip_content: {
+        location: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        trip_description: {
             type: DataTypes.TEXT,
             allowNull: true
         },
@@ -27,8 +31,8 @@ Trip.init(
             references: {
                 model: 'user',
                 key: 'id'
-            }
-        }
+            },
+        },
     },
     {
         sequelize,

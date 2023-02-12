@@ -15,6 +15,9 @@ const tripdata = [
       title: "Yosemite National Park",
       post_content: "You will touch the blue sky here in Yosemite!",
       user_id: 3
+  },
+  {
+    title: "New Zealand"
   }
 ]
 const seedTrips = () => Trip.bulkCreate(tripdata);
