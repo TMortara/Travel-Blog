@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
   try {
     const dbTripData = await Trip.findAll({
 
-      attributes: ["id", "title", "created_at", "trip_content"],
+      attributes: ["id", "location", "created_at", "trip_description"],
       include: [
         {
           model: Comment,
@@ -42,11 +42,11 @@ router.get("/", async (req, res) => {
 router.get('/trip/:id', (req, res) => {
   Post.findOne({
     where: {id: req.params.id},
-    attributes: ['id','title','created_at','trip_content'],
+    attributes: ['id', 'location', 'created_at', 'trip_description'],
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'trip_id', 'user_id', 'created_at'],
+        attributes: ["id", "comment_text", "trip_id", "user_id", "created_at"],
         include: {
           model: User,
           attributes: ['username']
