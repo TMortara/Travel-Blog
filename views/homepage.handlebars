@@ -13,10 +13,13 @@
 
 <!-- this is the update by Jungwoo utilizing "partials" -->
 <!-- I will include "trip-info.handlebars" right away -->
-{{#each trips as |trip|}}
+<div>
 
+{{#each trips as |trip|}}
+<a href="/login">
 <!-- Insert: views/partials/trip-info.handlebars-->
 {{> trip-info trip}}
+</a>
 </div> <!-- this will close each trip's "div" -->
 
 {{/each}}
