@@ -2,6 +2,10 @@ const router = require('express').Router();
 const { Daily } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+router.get('/', (req, res) => {
+    res.render('daily')
+});
+
 router.post('/', withAuth, async (req, res) => {
     try {
 
