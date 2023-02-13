@@ -192,3 +192,34 @@
    opacity: .6;
  }
  
+/* button {
+  background-color: #748C3F;
+ } */
+ #edit-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+ }
+
+ #btn-group {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin: 0.5rem;
+ }
+
+ #trip-data {
+  margin: 0.4rem;
+ }
+
+ #save-trip-btn {
+  margin-right: 0.6rem;
+ }
+
+ #edit-trip-btn {
+  margin-top: 0.4rem;
+ }
+
+ #create-trip-btn {
+  margin-top: 0.4rem;
+ }

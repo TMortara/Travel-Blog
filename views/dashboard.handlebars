@@ -10,7 +10,7 @@
       If a logged-in user does not have a post, just show "create Post" button to create one.
       --> 
     <div class="mb-5 pt-3">
-      <a href="/dashboard/create/"><button id="create-trip" class="button is-primary is-pulled-right">create trip</button></a>
+      <a href="/dashboard/create/"><button id="create-trip" class="button is-link is-pulled-right">create trip</button></a>
         
       <h2 class="title pb-4">Your dashboard: followings are your posts:</h2><hr>
 {{#if trips.length}}
@@ -18,7 +18,7 @@
 
     {{#each trips as |trip|}}
       {{> trip-info trip}}
-      <a href="/dashboard/edit/{{trip.id}}"><button class="button is-warning is-pulled-right">edit trip</button></a>
+      <a href="/dashboard/edit/{{trip.id}}"><button id="edit-trip-btn" class="button is-warning is-pulled-right">edit trip</button></a>
     </div>
   	{{/each}}
 {{else}}
