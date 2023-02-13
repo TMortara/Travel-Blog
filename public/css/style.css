@@ -93,7 +93,7 @@
    background-color: var(--quatrinary);
  }
  
- .each_post{
+ .each_trip{
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -112,14 +112,14 @@
    position: relative;
    background-color: var(--light_blue);
  }
- .each_post_title{
+ .each_trip_title{
    background-color: var(--light_purple);
    /*background-color: var(--light_purple);*/
    color: var(--white);
    font-weight: bold;
    padding: 10px;
  }
- .each_post_body{
+ .each_trip_body{
    background-color: var(--white);
    padding: 10px;
  }
@@ -223,3 +223,4 @@
  #create-trip-btn {
   margin-top: 0.4rem;
  }
+ 
