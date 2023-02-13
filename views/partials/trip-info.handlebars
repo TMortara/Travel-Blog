@@ -1,6 +1,17 @@
 <div class="each_trip">
     <h2 class="each_trip_title">{{location}}</h2>
+    <img src="/images/01-blossoming-apricot.jpg" alt="photo_test">
+    <!--
+    This should be look like this & 
+    I will update this later with uploaded trip photo:
+    <img src="/images/{{paintings.[0].filename}}" alt="{{paintings.[0].description}}">
+    -->
+
+    <!--
     <p class="each_trip_body">{{trip_description}}</p>
+    -->
+
+    <p class="each_trip_body">{{trip_description_trim trip_description}}</p>
     <div class = "align_right">
         <!--
             Note: "format_date" is pulled from /utils/helpser.js
