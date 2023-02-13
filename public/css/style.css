@@ -22,6 +22,8 @@
    margin: 0;
    text-align: left;
    background: var(--light_blue);
+   padding-top: 10px;
+   padding-bottom:10px;
  }
  .blog_title {
    padding-top: 20px;
@@ -36,7 +38,13 @@
    /*border-radius: 10px 10px 10px 10px;*/ /* [top_left, top_right, lower_right, lower_left] */
    /*box-shadow: 7px 7px 0px 0px red;*/ /* [horizontal_offset, vertical_offset, blur_radius, spread, color] */
  }
- 
+ .hike_logo{
+  height: 90px;
+  padding-left: 20px;
+ }
+ img {
+  float: left;
+ }
  nav {
    display: flex;
    background-color: var(--dark_blue);
