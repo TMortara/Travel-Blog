@@ -34,10 +34,21 @@ Trip.init(
             type: DataTypes.DATE,
             allowNull: false,
         },
+        image_location: {
+            type:DataTypes.STRING,
+            allowNull: true,
+        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'user',
+                key: 'id'
+            },
+        },
+        image_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'image',
                 key: 'id'
             },
         },

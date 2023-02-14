@@ -33,12 +33,16 @@ router.post('/', upload.single("image"), (req, res) => {
   } else {
     console.log(req.file.filename)
     console.log(req.file)
+
     const imgsrc = 'http://' + process.env.DB_HOST + ':' + PORT + '/images/' + req.file.filename
-    // Everything above this sequelize code works, uploads image to images folder but not DB
     console.log(imgsrc)
-    var insertData = "INSERT INTO image(file_src)VALUES(?)";
-    sequelize.literal(insertData, [imgsrc], (err) => {
-      if (err) throw err;
+
+    var insertData = `INSERT INTO image (file_src) VALUES (?)`;
+    sequelize.query(insertData, {replacements:[imgsrc]}, (err) => {
+      if (err) {
+        console.log(err);
+        throw err;
+      }
       console.log('file uploaded')
     })
   }

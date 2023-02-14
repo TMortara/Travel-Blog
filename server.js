@@ -59,7 +59,6 @@ app.use(bodyparser.urlencoded({
     extended: true
 }))
 
-console.log('jw1');
 app.use(routes); // call ./controllers/index.js
 
 sequelize.sync({ force: false }).then(() => {
