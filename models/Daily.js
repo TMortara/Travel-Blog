@@ -24,6 +24,10 @@ Daily.init(
             type: DataTypes.TEXT,
             allowNull: false,
         },
+        image_location: {
+            type:DataTypes.STRING,
+            allowNull: true,
+        },
         trip_id: {
             type: DataTypes.INTEGER,
             references: {
@@ -31,10 +35,17 @@ Daily.init(
                 key: 'id',
             },
         },
+        image_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'image',
+                key: 'id'
+            },
+        },
     },
     {
         sequelize,
-        // timestamps: false,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'daily',
