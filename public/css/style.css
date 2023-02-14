@@ -148,7 +148,7 @@
  .align_right {
    padding: 5px;
    text-align: right;
-   background-color: var(--grey);
+   background-color: var(--white);
    /*float: right;*/
  }
  
