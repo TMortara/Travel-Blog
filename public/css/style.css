@@ -22,6 +22,8 @@
    margin: 0;
    text-align: left;
    background: var(--light_blue);
+   padding-top: 10px;
+   padding-bottom:10px;
  }
  .blog_title {
    padding-top: 20px;
@@ -36,7 +38,13 @@
    /*border-radius: 10px 10px 10px 10px;*/ /* [top_left, top_right, lower_right, lower_left] */
    /*box-shadow: 7px 7px 0px 0px red;*/ /* [horizontal_offset, vertical_offset, blur_radius, spread, color] */
  }
- 
+ .hike_logo{
+  height: 90px;
+  padding-left: 20px;
+ }
+ img {
+  float: left;
+ }
  nav {
    display: flex;
    background-color: var(--dark_blue);
@@ -71,8 +79,8 @@
    /*padding: 2% 10%;*/ /* I prefer explict method */
    padding-top: 2%;
    padding-bottom: 2%;
-   padding-left: 20%;
-   padding-right: 20%;
+   padding-left: 20px;
+   padding-right: 20px;
    
    background-color: var(--white);
    /*
@@ -93,10 +101,19 @@
    background-color: var(--quatrinary);
  }
  
+ .trip {
+  flex: 4;
+  background-color: #fff;
+  padding: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+ }
  .each_trip{
-   display: flex;
+   /*display: flex;*/
    flex-direction: column;
    justify-content: center;
+   align-items: stretch;
    /*flex-wrap: wrap;*/
    border: 1px solid var(--dark_blue);
    /* this is same as above
@@ -105,10 +122,14 @@
    border-color: var(--dark_blue);
    */
    padding: 0px;
+   margin: 10px;
  
    margin-top: 1em;
    margin-bottom: 1em;
    max-width: 100%;
+   width: 30%;
+   height: 400px;
+
    position: relative;
    background-color: var(--light_blue);
  }
