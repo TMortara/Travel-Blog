@@ -1,4 +1,4 @@
-const { Daily } = require('../models');
+const { Daily } = require('../models/Index');
 
 const dailydata = [
     {
