@@ -12,24 +12,13 @@
 </head>
 <body>
   <header>
-    <img src="/images/hiking_logo_v3.png" alt="travel_logo" class="hike_logo">
 
     <div class="blog_title">
       <p>TRAVEL BLOG</p> <!-- this is the title of our blog; what about this? "MEET THE WORLD!"" -->
     </div>
+
   </header>
- 
-  <nav>
-    <a href="/">Home</a>
-    {{#if loggedIn}}
-    <a href="/dashboard">Dashboard</a>
-    <button id="logout" class="logout_button">Logout</button>
-    {{else}}
-    
-    <a href="/login">Login</a>
-    <a href="/signup">Register</a>
-    {{/if}}
-  </nav>
+    {{> navbar }}
   
   <main>
     <div>
