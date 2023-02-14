@@ -40,7 +40,7 @@ router.get("/", async (req, res) => {
 });
 
 router.get('/trip/:id', (req, res) => {
-  Post.findOne({
+  Trip.findOne({
     where: {id: req.params.id},
     attributes: ['id', 'location', 'created_at', 'trip_description'],
     include: [
