@@ -20,7 +20,6 @@ Comment.belongsTo(User,{
    foreignKey: 'user_id'
 });
 
-
 Comment.belongsTo(Trip, {
    foreignKey: 'trip_id'
  });
@@ -29,19 +28,20 @@ User.hasMany(Trip,{
    foreignKey: 'user_id'
 });
 
- User.hasMany(Comment, {
+User.hasMany(Comment, {
    foreignKey: 'user_id'
- });
+});
  
- Trip.hasMany(Comment, {
+Trip.hasMany(Comment, {
    foreignKey: 'trip_id'
- });
+});
 
+Image.belongsTo(Daily, {
+   foreignKey: 'image_id'
+});
 
-
-//  Image.belongsTo(Daily, {
-//    foreignKey: 'daily_id'
-//  });
-
+Image.belongsTo(Trip, {
+   foreignKey: 'image_id'
+});
  
-module.exports = { User, Trip, Comment, Daily };
+module.exports = { User, Trip, Comment, Daily, Image };
