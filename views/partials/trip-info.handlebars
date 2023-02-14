@@ -42,7 +42,7 @@
        <p class="each_trip_body">{{trip_description_trim trip_description}}</p>
     <div class = "align_right">
       <br>
-      <P> {{format_date created_at}} | </P>
+      <P> {{format_date created_at}} | <a href="/trip/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a> </P>
     </div>
   </div>
 </div>
