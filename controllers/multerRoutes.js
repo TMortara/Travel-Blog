@@ -32,6 +32,7 @@ router.post('/', upload.single("image"), (req, res) => {
     console.log("no file upload");
   } else {
     console.log(req.file.filename)
+    console.log(req.file)
     const imgsrc = 'http://' + process.env.DB_HOST + ':' + PORT + '/images/' + req.file.filename
     // Everything above this sequelize code works, uploads image to images folder but not DB
     console.log(imgsrc)
