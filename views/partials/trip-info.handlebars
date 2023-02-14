@@ -1,9 +1,9 @@
 
-<div class="each_trip">
+{{!-- <div class="each_trip">
     <a href="/trip/{{id}}">
         <h2 class="each_trip_title">{{location}}</h2>
         <img src="/images/01-blossoming-apricot.jpg" alt="photo_test">
-    </a>
+    </a> --}}
 
     <!--
     This should be look like this & 
@@ -23,29 +23,45 @@
 
         {{!-- <P> {{format_date created_at}} | <a href="/trip/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a></P> --}}
     {{!-- </div> --}}
-    <div class="card">
-  <div class="card-image">
-    <figure class="image is-4by3">
-      <img src="/images/01-blossoming-apricot.jpg" alt="photo_test">
-    </figure>
-  </div>
-  <div class="card-content">
-    <div class="media">
-      <div class="media-left">
+{{!-- <div class="card">
+    <div class="card-image">
+        <figure class="image is-4by3">
+            <img src="/images/01-blossoming-apricot.jpg" alt="photo_test">
         </figure>
-      </div>
-      <div class="media-content">
-        <h2 class="each_trip_title">{{location}}</h2>
-        <p class="subtitle is-6">Posted By: {{user.username}} |</p>
-      </div>
     </div>
+    <div class="card-content">
+        <div class="media">
+            <div class="media-left"></div>
+            <div class="media-content">
+                <h2 class="each_trip_title">{{location}}</h2>
+                <p class="subtitle is-6">Posted By: {{user.username}}</p>
+            </div>
+        </div>
 
     <div class="content">
        <p class="each_trip_body">{{trip_description_trim trip_description}}</p>
     <div class = "align_right">
       <br>
-      <P> {{format_date created_at}} | <a href="/trip/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a> </P>
+      <p>{{format_date created_at}} | <a href="/trip/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a></p>
     </div>
   </div>
-</div>
+</div> --}}
 
+<div class="card">
+    <div class="card-image">
+        <figure class="image is-4by3">
+            <img src="/images/jack-anstey-XVoyX7l9ocY-unsplash.jpg" alt="Photo Test">
+        </figure>
+    </div>
+    <div class="card-content">
+        <h2 class="each_trip_title">{{location}}</h2>
+        <div class="trip-description">
+           {{trip_description_trim trip_description}} 
+        </div>
+        <p class="subtitle is-6">Posted By: {{user.username}}</p>
+    </div>
+    <footer class="card-footer">
+        <a href="/trip/{{id}}" class="card-footer-item">Comment</a>
+        <a href="#" class="card-footer-item">View Trip Details</a>
+    </footer>
+</div>
