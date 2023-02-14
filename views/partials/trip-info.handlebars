@@ -16,7 +16,7 @@
         <!--
             Note: "format_date" is pulled from /utils/helpser.js
         -->
-        <P> {{format_date created_at}} | <a href="/trip/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a></P>
+        <P>Posted By: {{user.username}} | {{format_date created_at}} | <a href="/trip/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a></P>
     </div>
     
     <div class="card">
@@ -34,12 +34,12 @@
       </div>
       <div class="media-content">
         <p class="title is-4">John Smith</p>
-        <p class="subtitle is-6">Posted By: {{user.username}} |</p>
+        <p class="subtitle is-6">@johnsmith</p>
       </div>
     </div>
 
     <div class="content">
-     <p class="each_trip_body">{{trip_description_trim trip_description}}</p>
+       <p class="each_trip_body">{{trip_description_trim trip_description}}</p>
     <div class = "align_right">
       <br>
       <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
