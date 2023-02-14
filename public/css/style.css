@@ -134,11 +134,12 @@
    background-color: var(--light_blue);
  }
  .each_trip_title{
-   background-color: var(--light_purple);
+   /* background-color: var(--light_purple); */
    /*background-color: var(--light_purple);*/
-   color: var(--white);
+   text-align: left;
+   color: var(--black);
    font-weight: bold;
-   padding: 10px;
+   padding: 5px;
  }
  .each_trip_body{
    background-color: var(--white);
