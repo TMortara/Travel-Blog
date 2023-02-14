@@ -1,0 +1,19 @@
+  <div id="trip-info">
+    <h2>{{title}}</h2>
+    <h3>{{location}}</h3>
+    <p>{{trip_description}}</p>
+    <p>{{starting-date}} - {{ending_date}}</p>
+</div>
+<div id="daily-info">
+
+
+{{#each dailys as |daily|}}
+    {{> daily-info daily}}
+  	{{/each}}
+{{else}}
+    <h4 class="pb-4 has-text-centered is-italic">There is currently no daily notes for this trip. Click below to add daily notes.</h4>
+    <a href="/api/trip-details/{{trip.id}}"><button id="-add-daily-btn" class="button is-warning is-pulled-right">add notes</button></a>
+{{/if}}
+</div>
+
+<script src="/"></script>
