@@ -13,7 +13,7 @@ Image.init(
       },
 
       file_src: {
-        type: DataTypes.BLOB
+        type: DataTypes.STRING
       },
 
 //       user_id: {
