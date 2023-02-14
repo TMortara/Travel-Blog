@@ -1,6 +1,8 @@
 <div class="each_trip">
-    <h2 class="each_trip_title">{{location}}</h2>
-    <img src="/images/01-blossoming-apricot.jpg" alt="photo_test">
+    <a href="/trip/{{id}}">
+        <h2 class="each_trip_title">{{location}}</h2>
+        <img src="/images/01-blossoming-apricot.jpg" alt="photo_test">
+    </a>
     <!--
     This should be look like this & 
     I will update this later with uploaded trip photo:
@@ -16,6 +18,7 @@
         <!--
             Note: "format_date" is pulled from /utils/helpser.js
         -->
-        <P>Posted By: {{user.username}} | {{format_date created_at}} | <a href="/trip/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a></P>
+        <P>Posted By: {{user.username}} | {{format_date created_at}} | {{comments.length}} {{format_plural "comment" comments.length}}</a></P>
     </div>
+    
     
