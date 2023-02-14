@@ -18,17 +18,19 @@
       <p>TRAVEL BLOG</p> <!-- this is the title of our blog; what about this? "MEET THE WORLD!"" -->
     </div>
   </header>
+ 
   <nav>
     <a href="/">Home</a>
     {{#if loggedIn}}
     <a href="/dashboard">Dashboard</a>
     <button id="logout" class="logout_button">Logout</button>
     {{else}}
+    
     <a href="/login">Login</a>
     <a href="/signup">Register</a>
     {{/if}}
   </nav>
-
+  
   <main>
     <div>
       {{{body}}}
