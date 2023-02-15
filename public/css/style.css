@@ -332,5 +332,8 @@
   margin-left: .2rem;
   font-family: 'Arial';
   font-size: 1.2rem;
+ }
 
+ #dashboard-title {
+  text-align: center;
  }

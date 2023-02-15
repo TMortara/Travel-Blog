@@ -18,7 +18,7 @@ async function newFormHandler(event) {
     }
   }
    
-  document.querySelector('.add-daily-form').addEventListener('submit', newFormHandler);
+  document.querySelector('#add-daily-form').addEventListener('submit', newFormHandler);
  
 //  const cancelBtnEl = document.getElementById('cancel');
  
