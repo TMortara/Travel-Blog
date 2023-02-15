@@ -4,39 +4,34 @@ const path = require('path')
 require("dotenv").config();
 const sequelize = require('../config/connection');
 const Image = require('../models/Image')
-// Not sure if bodyparser is necessary or if it should be included here or in server.js
-// const bodyparser = require('body-parser')
-// app.use(bodyparser.json())
-// app.use(bodyparser.urlencoded({
-//     extended: true
-// }))
+
 const PORT = 3003;
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => { 
-      cb(console.error(), path.join(__dirname, '../public/multer_img/'))
-    },
-      filename: (req, file, cb) => {
-      console.log(file)
-      cb(null, Date.now() + path.extname(file.originalname))
-    }
+// const storage = multer.diskStorage({
+//     destination: (req, file, cb) => { 
+//       cb(console.error(), path.join(__dirname, '../public/multer_img/'))
+//     },
+//       filename: (req, file, cb) => {
+//       console.log(file)
+//       cb(null, Date.now() + path.extname(file.originalname))
+//     }
 
-  })
+//   })
   
-const upload = multer({storage: storage});
+// const upload = multer({storage: storage});
 
-router.get('/', async (req, res) => {
+// router.get('/', async (req, res) => {
     
-    const pictures = await Image.findAll({
-      attributes: ['file_src'],
-    })
-    const pictureInfo = pictures.map(image => image.get({
-      plain: true
-    }))
-    console.log(pictureInfo, 'pictureInfo for GET')
-    res.render('upload', {pictureInfo})
+//     const pictures = await Image.findAll({
+//       attributes: ['file_src'],
+//     })
+//     const pictureInfo = pictures.map(image => image.get({
+//       plain: true
+//     }))
+//     console.log(pictureInfo, 'pictureInfo for GET')
+//     res.render('upload', {pictureInfo})
    
 
-})
+// })
 
 router.post('/', upload.single("image"), async (req, res) => {
   if(!req.file) {

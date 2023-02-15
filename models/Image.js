@@ -14,6 +14,22 @@ Image.init(
     file_src: {
       type: DataTypes.STRING,
     },
+
+    // daily_id: {
+    //   references: {
+    //     model: 'daily',
+    //     key: 'id'
+
+    //   },
+    // },
+
+    // trip_id: {
+    //   references: {
+    //     model: 'trip',
+    //     key: 'id'
+    //   },
+    // },
+
   },
   {
     sequelize,
