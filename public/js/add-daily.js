@@ -1,9 +1,9 @@
 async function newFormHandler(event) {
     event.preventDefault();
    
-    const dateEl = document.querySelector('input[name="date"]').value;
-    const placesVistedEl = document.querySelector('input[name="places-visited"]').value;
-    const dailyNotesEl = document.querySelector('input[name="daily-notes"]').value;
+    const date_created = document.querySelector('input[name="date_created"]').value;
+    const places_visited = document.querySelector('input[name="places_visited"]').value;
+    const daily_notes = document.querySelector('input[name="daily_notes"]').value;
    
     const response = await fetch(`/api/trip-details/add-daily`, {
       method: 'POST',
