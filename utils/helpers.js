@@ -26,6 +26,21 @@ module.exports = {
     } else {
       return str.split(/\s+/).slice(0,10).join(" ") + ' ...';
     }
+  },
+  get_random_image: ()=> {
+    const imagesSrcArr = [
+      "/images/alex-azabache-V83v-MYB_Z8-unsplash.jpg",
+      "/images/caroline-selfors-r2jpr8MDw0I-unsplash.jpg",
+      "/images/dariusz-sankowski-3OiYMgDKJ6k-unsplash.jpg",
+      "/images/dino-reichmuth-A5rCN8626Ck-unsplash.jpg",
+      "/images/fabio-comparelli-uq2E2V4LhCY-unsplash.jpg",
+      "/images/ian-dooley-DuBNA1QMpPA-unsplash.jpg",
+      "/images/jack-anstey-XVoyX7l9ocY-unsplash.jpg",
+      "/images/Lake-Mountains_VZBJUVPO25.jpg",
+      "/images/luca-bravo-O453M2Liufs-unsplash.jpg",
+      "/images/stefan-stefancik-0wMmxNB6Xzc-unsplash.jpg"
+     ]
+    return imagesSrcArr[Math.floor(Math.random()*imagesSrcArr.length)]
   }
  };
  
