@@ -6,29 +6,34 @@ router.get('/:id', withAuth, async (req, res) => {
     try {
         const dailyData = await Daily.findAll({
             where: {trip_id: req.params.id},
-            include: [
-                {
-                    model: Trip,
-                    attributes: [
-                        'id',
-                        'title',
-                        'starting_date',
-                        'ending_date',
-                        'trip_description',
-                    ],
-                },
-            ],
+            // include: [
+            //     {
+            //         model: Trip,
+            //         attributes: [
+            //             'id',
+            //             'title',
+            //             'starting_date',
+            //             'ending_date',
+            //             'trip_description',
+            //         ],
+            //     },
+            // ],
         });
+
+        const trip = await Trip.findByPk(req.params.id);
      
         const dailies = dailyData.map((daily) =>
             daily.get({ plain: true })
         );
         console.log(dailies);
-        // res.render('trip-details', {
-        //     dailies,
-        //     loggedIn: req.session.loggedIn,
-        // });
-        res.json(dailies);
+        console.log(trip)
+        
+        res.render('trip-details', {
+            dailies,
+            trip,
+            loggedIn: req.session.loggedIn,
+        });
+
     } catch (err) {
         console.log(err);
         res.status(500).json(err);

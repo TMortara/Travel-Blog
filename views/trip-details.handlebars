@@ -6,13 +6,13 @@
 </div>
 <div id="daily-info">
 
-{{#each dailys as |daily|}}
+{{#each dailies as |daily|}}
     {{> daily-info daily}}
   	{{/each}}
-{{else}}
+{{!-- {{else}} --}}
     <h4 class="pb-4 has-text-centered is-italic">There is currently no daily notes for this trip. Click below to add daily notes.</h4>
     <a href="/trip/add"><button id="-add-daily-btn" class="button is-warning is-pulled-right">add daily notes</button></a>
-{{/if}}
+{{!-- {{/if}} --}}
 </div>
 
 <script src="/js/add-daily.js"></script>
