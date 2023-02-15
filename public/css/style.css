@@ -1,14 +1,4 @@
 :root {
-  /* 
-   --primary: #3d5852;
-   --secondary: #86938f;
-   --tertiary: #5e877f;
-   --quatrinary: #6c6b67;
-   --light: #e3e4e3;
-   --dark: #182c23;
-   --error: rgb(228, 46, 1);
-   --border-radius: 0.3rem;
- */
    --light_blue: #CDDAEB;
    --dark_blue: #152A44;
    --light_purple: #7C74FE;
@@ -24,15 +14,26 @@
    background: var(--light_blue);
    padding-top: 10px;
    padding-bottom:10px;
+  
+   /*background-image: url("../images/ian-dooley-DuBNA1QMpPA-unsplash.jpg");*/
+  background-image: url("../images/luca-bravo-O453M2Liufs-unsplash.jpg");
+  height: 80%;
+  background-position: center;
+  /*background-repeat: repeat;*/
+  /*background-size: contain;*/
+  background-size: cover;      
  }
  .blog_title {
    padding-top: 20px;
    padding-bottom: 20px;
    width: 100%;
    /*background: var(--light_blue);*/
-   color: var(--dark_blue);
+   color: var(--light_purple);
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: var(--white);   
+   
    text-align: center;
-   font-size: 2.0em;
+   font-size: 3.0em;
    font-weight: 900;
    /*border: 5px blue;*/
    /*border-radius: 10px 10px 10px 10px;*/ /* [top_left, top_right, lower_right, lower_left] */
@@ -179,9 +180,18 @@
  }
  
  
+  .trip {
+  flex: 4;
+  background-color: #fff;
+  padding: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+ }
+
  .card {
    margin: 20px;
-   flex: 0 1 300px;
+   flex: 0 1 500px;
    border: 7px double var(--dark);
    border-radius: 10px;
    background-color: var(--light);
@@ -203,11 +213,31 @@
    text-align: center;
    font-weight: bold;
  }
- 
+ .each_trip_title{
+  /*background-color: var(--light_purple);*/
+  text-align: left;
+  color: var(--black);
+  font-weight: bold;
+  padding: 0px;
+}
+
+.single-trip{
+  padding-left: 30%;
+  padding-right: 30%;
+}
+/*
+.subtitle{
+  font-weight: bold;
+  font-size: 0.5em;
+  color: var(--dark_purple);
+}
+*/
+
  .comment {
    padding: 1%;
    margin-bottom: 0.2%;
    background-color: wheat;
+   margin: 20px;
  }
  .comment .meta {
    font-size: 90%;
