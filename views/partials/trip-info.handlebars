@@ -24,9 +24,24 @@
         <a href="/api/trip-details/{{id}}" class="card-footer-item">View Trip Details</a>
         <a href="/dashboard/edit/{{id}}" class="card-footer-item">Edit Trip</a>
         -->
-        <a class="button is-link" href="/trip/{{id}}">Comment</a>
+        <a class="button is-link" href="/trip/{{id}}">View/Add Comment</a> <!-- this will render: single-trip.handlebars -->
         <a class="button is-link" href="/api/trip-details/{{id}}">View Trip Details</a>
         <a class="button is-link" href="/dashboard/edit/{{id}}">Edit Trip</a>
+
+        <!--
+            jw, I don't understand why the following does not work...
+        -->
+        <!--
+        {{#if loggedIn}}
+        <a class="button is-link" href="/trip/{{id}}">View/Add Comment</a> <! this will render: single-trip.handlebars >
+        <a class="button is-link" href="/api/trip-details/{{id}}">View Trip Details</a>
+        <a class="button is-link" href="/dashboard/edit/{{id}}">Edit Trip</a>
+        {{else}}
+        <a class="button is-link" href="/trip/{{id}}">View Comment</a> <! this will render: single-trip.handlebars >
+        <a class="button is-link" href="/api/trip-details/{{id}}">View Trip Details</a>
+        {{/if}}
+        -->
         
     </footer>
+
 </div>

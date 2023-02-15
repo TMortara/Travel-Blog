@@ -230,8 +230,8 @@
 }
 
 .single-trip{
-  padding-left: 30%;
-  padding-right: 30%;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 .subtitle{
   background-color: var(--grey);
@@ -244,7 +244,7 @@
    padding: 1%;
    margin-bottom: 0.2%;
    background-color: wheat;
-   margin: 20px;
+   /*margin: 20px;*/
  }
  .comment .meta {
    font-size: 90%;

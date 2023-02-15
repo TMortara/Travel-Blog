@@ -1,21 +1,28 @@
 <div class="single-trip">
-{{> trip-info trip}}
-</div> <!-- this will close the trip-info's card div -->
-<!-- only display for a logged-in user -->
-{{#if loggedIn}}
-<form class="comment-form">
-  <div>
-    <textarea class="textarea" name="comment-body" placeholder="your comments here:" rows="5"></textarea>
-  </div>
+  {{> trip-info trip}}
+  
+  <!--</div>--> <!-- this will close the trip-info's card div -->
+  <!-- only display for a logged-in user -->
+  {{#if loggedIn}}
+  <div class="card"> <!-- I am putting this to have the identical padding style as in the trip-info -->
+    {{> comments trip.comments}}
+    <form class="comment-form">
+      <div>
+        <textarea class="textarea" name="comment-body" placeholder="your comments here:" rows="5"></textarea>
+      </div>
 
-  <div>
-    <button class="button is-link is-pulled-right" type="submit">add comment</button>
+      <div>
+        <button class="button is-link is-pulled-right" type="submit">add comment</button>
+      </div>
+    </form>
   </div>
-</form>
-{{/if}}
+  {{else}}
+  <div class="card">
+    {{> comments trip.comments}}
+  </div>
+  {{/if}}
 
-{{> comments trip.comments}}
-</div> <!-- this will close the single-trip -->
+</div> <!-- close: <div class="single-trip"> -->
 
 {{#if loggedIn}}
 <script src="/js/comment.js"></script>
