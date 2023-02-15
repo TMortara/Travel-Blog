@@ -1,5 +1,6 @@
-# Travel-Blog
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
+# Wanderlust Travel Blog
+
+# Deployed Application
 
 ## 1. Table of Contents
 - [Description](#2-description)
@@ -8,21 +9,21 @@
 - [File Structure](#5-file-structure)
 - [Built With](#6-built-with)
 - [License](#7-license)
-- [Recording](#8-recording)
-- [Screenshots](#9-screenshots)
-- [Credits](#10-credits)
-- [Questions](#11-questions)
+- [Screenshots](#8-screenshots)
+- [Credits](#9-credits)
+- [Questions](#10-questions)
 
 ## 2. Description
+The Wanderlust Travel Blog allows users to add and edit trips to ensure all their memories are kept in one place.  On the site users can add new trips, edit existing trips, and delete trips that may not have happened or that you want to forget.  Within the trips, users can also upload images for their trip and create a daily log within each of their trips. 
 
 ## 3. Installation
-Please make sure to have following programs installed on your computer to use this app:
+Please make sure to have following programs installed on your computer to use this application:
 + [VS Code](https://code.visualstudio.com/download)
 + [Git](https://github.com/git-guides/install-git)
 + [Node.js](https://nodejs.org/en/)
 + [MySQL](https://www.mysql.com/)
 
-To use this program, `git clone` the repo down to your local. Then, run `npm install` in order to install the `npm` package dependencies as specified in the `./package.json` - `Express.js`, `mysql2`, `sequelize`, and `dotenv` will be installed. Now, you are ready to go!
+To use this application, `git clone` the repo down to your local. Then, run `npm install` in order to install the dependencies as specified in the `package.json` (bcrypt, body-parser, connect-session, dotenv, express, express-handlebars, express-session, multer, mysql2, nodemon, sequelize) will be installed. Now, you are ready to go!
 
 ## 4. Usage
 To use this application, follow the instruction below: 
@@ -48,7 +49,7 @@ To use this application, follow the instruction below:
       + DB_NAME="travel_db"
       + DB_USER="root"
       + DB_PASSWORD="your_mysql_password"
-      + DB_HOST='localhost'
+      + DB_HOST='localhost' OR '127.0.0.1'
   + Then, run the program with one of the following approaches:
     + `node server.js` or `npm run start`: these will start `node` program in normal way. 
     + `npm run nodemon`: this will start `node` program with `nodemon`, which monitors the project directory and automatically restarts your node application when it detects any changes.
@@ -74,16 +75,21 @@ The directory for this application is as follows:
 + ./README.md: readme file
 
 ## 6. Built With:
-![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white) ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white) ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) ![Handlebars](https://img.shields.io/badge/Handlebars.js-f0772b?style=for-the-badge&logo=handlebarsdotjs&logoColor=black)
+
+Also used to build this application: 
++ bcrypt
++ multer
++ Bulma
 
 ## 7. License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 8. Recording
-
 ## 9. Screenshots
 
 ## 10. Credits
++ Torre for all the support in getting our application running.
++ Jason, Awais, Bradley, and Walter for answering all of our questions and letting us stay late to finish things up for the night.
 ## 11. Questions?:
 If you have any questions, feel free to contact one of our team members via information below:<br>
 + Tracy Mortara:
