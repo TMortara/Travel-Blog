@@ -5,7 +5,7 @@ async function newFormHandler(event) {
     const places_visited = document.querySelector('input[name="places_visited"]').value;
     const daily_notes = document.querySelector('input[name="daily_notes"]').value;
    
-    const response = await fetch(`/api/trip-details/add-daily`, {
+    const response = await fetch(`/api/trip-details`, {
       method: 'POST',
       body: JSON.stringify({date_created,places_visited,daily_notes}),
       headers: {'Content-Type': 'application/json'}
