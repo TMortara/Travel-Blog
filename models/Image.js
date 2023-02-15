@@ -10,9 +10,17 @@ Image.init(
       primaryKey: true,
       autoIncrement: true,
     },
-
+    type: {
+      type: DataTypes.STRING,
+    },
+    name: {
+      type: DataTypes.STRING,
+    },
     file_src: {
       type: DataTypes.STRING,
+    },
+    data: {
+        type: DataTypes.BLOB("long"),
     },
   },
   {

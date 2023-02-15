@@ -24,6 +24,15 @@
       <label for="trip-description">Add a description for your trip:</label>
       <input class="textarea" id="trip-description" name="trip-description" placeholder="Add a description of your trip"/>
     </div>
+
+    <div>
+      <h1>Upload Image</h1>
+      <form method="POST" action="/upload" enctype="multipart/form-data">
+          <input type="file" name="image" accept="image/*">
+          <input type="submit" value="Upload">
+      </form>
+    </div>
+
     <button type="submit" id="create-trip-btn" class="button is-link is-pulled-right">create trip</button>
   </form>
 </section>

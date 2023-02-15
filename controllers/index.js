@@ -4,9 +4,11 @@ const homeRoutes = require('./homeRoutes');
 const dashboardRoutes = require('./dashboardRoutes');
 const apiRoutes = require('./api');
 const multerRoutes = require('./multerRoutes')
+const upload = require('./upload');
 
 router.use('/', homeRoutes);
-router.use('/upload', multerRoutes);
+//router.use('/upload', multerRoutes);
+router.use('/upload', upload);
 router.use('/dashboard',dashboardRoutes);
 router.use('/api', apiRoutes);
 
