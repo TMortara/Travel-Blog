@@ -20,7 +20,8 @@ router.get('/:id', withAuth, async (req, res) => {
             // ],
         });
 
-        const trip = await Trip.findByPk(req.params.id);
+        const dbTrip = await Trip.findByPk(req.params.id)
+        const trip = dbTrip.get({ plain: true });
      
         const dailies = dailyData.map((daily) =>
             daily.get({ plain: true })
@@ -39,5 +40,13 @@ router.get('/:id', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+router.get('/:id/add-daily', (req, res) => {
+    try {
+      res.render('add-daily-info');
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
 
 module.exports = router;
