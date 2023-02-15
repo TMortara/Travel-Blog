@@ -233,13 +233,12 @@
   padding-left: 30%;
   padding-right: 30%;
 }
-/*
 .subtitle{
+  background-color: var(--grey);
   font-weight: bold;
   font-size: 0.5em;
-  color: var(--dark_purple);
+  /*color: var(--dark_purple);*/
 }
-*/
 
  .comment {
    padding: 1%;

@@ -1,66 +1,32 @@
-
-{{!-- <div class="each_trip">
-    <a href="/trip/{{id}}"></a> --}}
-
-    <!--
-    This should be look like this & 
-    I will update this later with uploaded trip photo:
-    <img src="/images/{{paintings.[0].filename}}" alt="{{paintings.[0].description}}">
-    -->
-
-    <!--
-    <p class="each_trip_body">{{trip_description}}</p>
-    -->
-
-    {{!-- <p class="each_trip_body">{{trip_description_trim trip_description}}</p>
-    <div class = "align_right"> --}}
-        <!--
-            Note: "format_date" is pulled from /utils/helpser.js
-        -->
-
-        {{!-- <P> {{format_date created_at}} | <a href="/trip/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a></P> --}}
-    {{!-- </div> --}}
-{{!-- <div class="card">
-    <div class="card-image">
-        <figure class="image is-4by3">
-            <img src="/images/01-blossoming-apricot.jpg" alt="photo_test">
-        </figure>
-    </div>
-    <div class="card-content">
-        <div class="media">
-            <div class="media-left"></div>
-            <div class="media-content">
-                <h2 class="each_trip_title">{{location}}</h2>
-                <p class="subtitle is-6">Posted By: {{user.username}}</p>
-            </div>
-        </div>
-
-    <div class="content">
-       <p class="each_trip_body">{{trip_description_trim trip_description}}</p>
-    <div class = "align_right">
-      <br>
-      <p>{{format_date created_at}} | <a href="/trip/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a></p>
-    </div>
-  </div>
-</div> --}}
-
 <div class="card">
     <div class="card-image">
         <figure class="image is-4by3">
+            <!-- jw, Note, this image should be updated by uploaded trip photo -->
             <img src="/images/jack-anstey-XVoyX7l9ocY-unsplash.jpg" alt="Photo Test">
         </figure>
     </div>
     <div class="card-content">
         <h2 class="each_trip_title">{{location}}</h2>
         <div class="trip-description">
-           {{trip_description_trim trip_description}} 
+            <!-- trip_description will be trimmed in 10 words -->
+            {{trip_description_trim trip_description}} 
         </div>
-        <p class="subtitle is-6">Posted By: {{user.username}}</p>
+        <!--<p class="subtitle is-6">Posted By: {{user.username}}</p>-->
+        <P class="subtitle is-6">Posted By: 
+            {{user.username}} | 
+            {{format_date created_at}} | 
+            <a href="/trip/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+        </P>
     </div>
     <footer class="card-footer">
+        <!--
         <a href="/trip/{{id}}" class="card-footer-item">Comment</a>
         <a href="/api/trip-details/{{id}}" class="card-footer-item">View Trip Details</a>
         <a href="/dashboard/edit/{{id}}" class="card-footer-item">Edit Trip</a>
-
+        -->
+        <a class="button is-link" href="/trip/{{id}}">Comment</a>
+        <a class="button is-link" href="/api/trip-details/{{id}}">View Trip Details</a>
+        <a class="button is-link" href="/dashboard/edit/{{id}}">Edit Trip</a>
+        
     </footer>
-<!--</div>-->
+</div>
