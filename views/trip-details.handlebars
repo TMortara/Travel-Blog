@@ -6,6 +6,8 @@
     <h3>Location: {{trip.location}}</h3>
     <p>Trip Description: {{trip.trip_description}}</p>
     <p>Date of Trip: {{format_date trip.starting_date}} - {{format_date trip.ending_date}}</p>
+<a href="/api/trip-details/{{trip.id}}/add-daily"><button id="-add-daily-btn" class="button is-warning is-pulled-right">add daily notes</button></a>
+
   </div>
   </div>
 </div>
@@ -17,7 +19,6 @@
 {{else}}
     <h4 class="pb-4 has-text-centered is-italic">There is currently no daily notes for this trip. Click below to add daily notes.</h4>
 {{/if}}
-<a href="/api/trip-details/{{trip.id}}/add-daily"><button id="-add-daily-btn" class="button is-warning is-pulled-right">add daily notes</button></a>
 </div>
 
 <script src="/js/add-daily.js"></script>
