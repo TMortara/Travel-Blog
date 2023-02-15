@@ -1,0 +1,23 @@
+<article>
+  <h2 class="title mt-5">Add Daily Notes: </h2><hr>
+  <form class="add-daily-form">
+    <div>
+      <label for="date_created">Date:</label>
+      <input type="date_created" id="date_created" name="date_created" value="{{daily.date_created}}"/>
+    </div>
+    <div>
+      <label for="places_visited">Where did you go today?</label>
+      <input class="input" name="places_visited" type="textarea" value="{{daily.places_visited}}" />
+    </div>
+    <div>
+      <label for="daily_notes">Notes from the day:</label>
+      <input type="textarea" id="daily_notes" name="daily_notes" value="{{daily.daily_notes}}"/>
+    </div>
+    <div id="daily-btns">
+        <button type="submit" class="button is-link is-pulled-right" name="submit" id="submit">Submit</button>
+        <button class="button is-link is-pulled-right" id="cancel">Cancel</button>
+    </div>
+  </form>
+</article>
+
+<script src="/js/add-daily.js"></script>
