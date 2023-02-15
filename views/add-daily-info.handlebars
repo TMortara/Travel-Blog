@@ -13,6 +13,14 @@
       <label for="daily_notes">Notes from the day:</label>
       <input type="textarea" id="daily_notes" name="daily_notes" value="{{daily.daily_notes}}"/>
     </div>
+
+    {{!-- multer uploader --}}
+    <h1>Upload Image</h1>
+    <form method="POST" action="/upload" enctype="multipart/form-data">
+      <input type="file" name="image" accept="image/*">
+      <input type="submit" value="Upload">
+    </form>
+    
     <div id="daily-btns">
         <button type="submit" class="button is-link is-pulled-right" name="submit" id="submit">Submit</button>
         <button class="button is-link is-pulled-right" id="cancel">Cancel</button>
