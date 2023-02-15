@@ -25,15 +25,6 @@ const storage = multer.diskStorage({
 const upload = multer({storage: storage});
 
 router.get('/', async (req, res) => {
-    
-//     const pictures = await Image.findAll({
-//       attributes: ['file_src'],
-//     })
-//     const pictureInfo = pictures.map(image => image.get({
-//       plain: true
-//     }))
-//     console.log(pictureInfo, 'pictureInfo for GET')
-//     res.render('upload', {pictureInfo})
    res.render('upload')
 
  })
@@ -44,7 +35,6 @@ router.post('/', upload.single("image"), async (req, res) => {
   } else {
 
     const imgsrc = 'http://' + process.env.DB_HOST + ':' + PORT + '/upload/' + req.file.filename
-    // const imgsrc = req.file.filename
     
     console.log(imgsrc, 'inserting data in database')
 
@@ -60,14 +50,7 @@ router.post('/', upload.single("image"), async (req, res) => {
     
   }
 
-  const pictures = await Image.findAll({
-    attributes: ['file_src'],
-  })
-  const pictureInfo = pictures.map(image => image.get({
-    plain: true
-  }))
-  console.log(pictureInfo, 'pictureInfo for after database insertion')
-  res.render('upload', {pictureInfo})
+  res.render("upload-success")
 })
 
 module.exports = router;
