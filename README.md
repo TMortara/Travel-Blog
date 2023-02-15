@@ -67,6 +67,7 @@ The directory for this application is as follows:
 + ./seeds: these javascript files will create (seed) tables in `travel_db`
 + ./utils: helper files to use handlebars
 + ./views: Express-Handlebars related files
++ ./env: Environmental variable definitions
 + ./.gitignore: specifies intentionally untracked files that Git should ginore
 + ./LICENSE: MIT License 
 + ./package.json: specifics of npm's package.json handling
@@ -76,12 +77,19 @@ The directory for this application is as follows:
 ## 6. Built With:
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white) ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white) ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) ![Handlebars](https://img.shields.io/badge/Handlebars.js-f0772b?style=for-the-badge&logo=handlebarsdotjs&logoColor=black)
 
+Also used to build this application: 
++ bcrypt
++ multer
++ Bulma
+
 ## 7. License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## 9. Screenshots
 
 ## 10. Credits
++ Torre for all the support in getting our application running.
++ Jason, Awais, Bradley, and Walter for answering all of our questions and letting us stay late to finish things up for the night.
 ## 11. Questions?:
 If you have any questions, feel free to contact one of our team members via information below:<br>
 + Tracy Mortara:
