@@ -1,5 +1,6 @@
+<div class="single-trip">
 {{> trip-info trip}}
-
+</div> <!-- this will close the trip-info's card div -->
 <!-- only display for a logged-in user -->
 {{#if loggedIn}}
 <form class="comment-form">
@@ -14,6 +15,7 @@
 {{/if}}
 
 {{> comments trip.comments}}
+</div> <!-- this will close the single-trip -->
 
 {{#if loggedIn}}
 <script src="/js/comment.js"></script>
