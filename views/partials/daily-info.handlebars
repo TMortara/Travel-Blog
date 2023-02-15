@@ -1,10 +1,32 @@
 
-<div>
+{{!-- <div>
     <h6 class="pb-4 has-text-centered is-italic">You do not have any trips yet</h6>
-    <a href="/api/trip-details/{{trip.id}}/add-daily"><button id="add-daily-btn" class="button is-warning is-pulled-right">add daily notes</button></a>
+    <a href="/api/trip-details/{{trip.id}}/add-daily"><button id="add-daily-btn" class="button is-warning is-pulled-right">add daily notes</button></a> --}}
 
 
-{{places_visited}}
-{{daily_notes}}
+{{!-- {{places_visited}}
+{{daily_notes}} --}}
 
+<div id="daily-card" class="card">
+    <div class="card-image">
+        <figure class="image is-4by3">
+            <img src="/images/jack-anstey-XVoyX7l9ocY-unsplash.jpg" alt="Photo Test">
+        </figure>
+    </div>
+    <div class="card-content">
+        <p class="places_visited">{{places_visited}}</p>
+        <div class="daily_notes">
+           {{daily_notes}} 
+        </div>
+        <p class="each_daily">{{date_created}}</p>
+    </div>
 </div>
+    {{!-- <footer class="card-footer">
+        <a href="/trip/{{id}}" class="card-footer-item">Comment</a>
+        <a href="/api/trip-details/{{id}}" class="card-footer-item">View Trip Details</a>
+        <a href="/dashboard/edit/{{id}}" class="card-footer-item">Edit Trip</a>
+
+    </footer> --}}
+<!--</div>-->
+
+{{!-- </div> --}}
