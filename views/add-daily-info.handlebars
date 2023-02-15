@@ -13,11 +13,22 @@
       <label for="daily_notes">Notes from the day:</label>
       <input type="textarea" id="daily_notes" name="daily_notes" value="{{daily.daily_notes}}"/>
     </div>
+
+    {{!-- multer buttons --}}
+      {{!-- <form method="POST" action="/api/trip-details/5/add-daily" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*">
+    <input type="submit" value="Upload">
+      </form> --}}
+
+  </form>
+    <div>
+      <p>Would you like to inlude an image?</p>
+      <button type="submit" name="image-upload"><a href="/upload">Upload Here</a></button>
+    </div>
     <div id="daily-btns">
         <button type="submit" class="button is-link is-pulled-right" name="submit" id="submit">Submit</button>
         <button class="button is-link is-pulled-right" id="cancel">Cancel</button>
     </div>
-  </form>
 </article>
 
 <script src="/js/add-daily.js"></script>

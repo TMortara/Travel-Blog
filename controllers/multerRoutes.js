@@ -3,16 +3,17 @@ const multer = require('multer')
 const path = require('path')
 require("dotenv").config();
 const sequelize = require('../config/connection');
+const Image = require('../models/Image')
 // Not sure if bodyparser is necessary or if it should be included here or in server.js
 // const bodyparser = require('body-parser')
 // app.use(bodyparser.json())
 // app.use(bodyparser.urlencoded({
 //     extended: true
 // }))
-const PORT = 3000;
+const PORT = 3003;
 const storage = multer.diskStorage({
     destination: (req, file, cb) => { 
-      cb(console.error(), 'images')
+      cb(console.error(), path.join(__dirname, '../public/upload/'))
     },
       filename: (req, file, cb) => {
       console.log(file)
@@ -21,21 +22,21 @@ const storage = multer.diskStorage({
 
   })
   
-  const upload = multer({storage: storage});
+const upload = multer({storage: storage});
 
-router.get('/', (req, res) => {
-    res.render("upload")
-})
+router.get('/', async (req, res) => {
+   res.render('upload')
 
-router.post('/', upload.single("image"), (req, res) => {
+ })
+
+router.post('/', upload.single("image"), async (req, res) => {
   if(!req.file) {
     console.log("no file upload");
   } else {
-    console.log(req.file.filename)
-    console.log(req.file)
 
-    const imgsrc = 'http://' + process.env.DB_HOST + ':' + PORT + '/images/' + req.file.filename
-    console.log(imgsrc)
+    const imgsrc = 'http://' + process.env.DB_HOST + ':' + PORT + '/upload/' + req.file.filename
+    
+    console.log(imgsrc, 'inserting data in database')
 
     var insertData = `INSERT INTO image (file_src) VALUES (?)`;
     sequelize.query(insertData, {replacements:[imgsrc]}, (err) => {
@@ -45,8 +46,11 @@ router.post('/', upload.single("image"), (req, res) => {
       }
       console.log('file uploaded')
     })
+   
+    
   }
-    res.send('Image uploaded')
+
+  res.render("upload-success")
 })
 
 module.exports = router;
