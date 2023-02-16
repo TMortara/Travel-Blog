@@ -1,8 +1,8 @@
-<h1 style="font-size: 2rem; margin-left: 2rem;">Upload successful!</h1>
+<h1 style="font-size: 2rem; margin-left: 1rem; margin-bottom: 1rem">Upload successful!</h1>
 {{#each pictureInfo as |picture|}}
 <img src="">
 {{#if @last}}
-<img src={{picture.file_src}}>
+<img src={{picture.file_src}} style="margin-bottom: 1rem;">
 {{/if}} {{/each}}
 
 <button class="button is-warning is-pulled-right"><a href="/dashboard" style="text-decoration: none">Back to Dashboard</a></button>
