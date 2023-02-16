@@ -1,4 +1,5 @@
 const router = require("express").Router();
+require("dotenv").config();
 const sequelize = require("../config/connection");
 const { Trip, User, Comment } = require("../models");
 
