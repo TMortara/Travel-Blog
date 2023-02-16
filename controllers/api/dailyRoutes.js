@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Daily, Trip } = require('../../models/Index');
 const withAuth = require('../../utils/auth');
 
+//Post new daily notes to the Trip Details page
 router.post('/', withAuth, async (req, res) => {
     try {
 
