@@ -1,4 +1,4 @@
-<article>
+<article class="container">
   <h2 class="title mt-5">Add Daily Notes: </h2><hr>
   <form class="add-daily-form">
     <div>
@@ -11,18 +11,23 @@
     </div>
     <div>
       <label for="daily_notes">Notes from the day:</label>
-      <input type="textarea" id="daily_notes" name="daily_notes" value="{{daily.daily_notes}}"/>
+      <input class="input" type="textarea" id="daily_notes" name="daily_notes" value="{{daily.daily_notes}}"/>
+    </div>
+    <div id="trip-id" value="{{trip.id}}" hidden></div>
+    {{!-- multer buttons --}}
+      {{!-- <form method="POST" action="/api/trip-details/5/add-daily" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*">
+    <input type="submit" value="Upload">
+      </form> --}}
+      <div class="row" id="upload-row">
+        <p id="upload-p">Would you like to include an image?</p>
+      <button type="submit" name="image-upload" class="button" id="upload-here-btn"><a id="upload-a" href="/upload">Upload Here</a></button>
+    </div>
+     <div id="daily-btns">
+        <button type="submit" class="button is-link is-pulled-right" id="add-daily-form">Submit</button>
+        <button class="button is-warning is-pulled-right" id="cancel"><a href="/api/trip-details/{{trip.id}}" style="text-decoration:none; color: white">Cancel</a></button>
     </div>
   </form>
-  <div class="row" id="upload-row">
-    <p id="upload-p">Would you like to include an image?</p>
-    <button type="submit" name="image-upload" class="button" id="upload-here-btn"><a id="upload-a" href="/upload">Upload Here</a></button>
-  </div>
-  <div id="daily-btns">
-    <button type="submit" class="button is-link is-pulled-right" name="submit" id="add-daily-form">Submit</button>
-
-    <button class="button is-link is-pulled-right separation" id="cancel"><a href="/dashboard" style="text-decoration:none; color: white">Cancel</a></button>
-  </div>
 </article>
 
 <script src="/js/add-daily.js"></script>
