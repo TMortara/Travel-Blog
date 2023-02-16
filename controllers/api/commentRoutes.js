@@ -1,6 +1,6 @@
 const router = require('express').Router();
-// const { Comment } = require('../../models/index.Js');
-const { Comment } = require('../../models');
+const { Comment } = require('../../models/index');
+// const { Comment } = require('../../models');
 
 const withAuth = require('../../utils/auth');
 

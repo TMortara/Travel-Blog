@@ -1,6 +1,6 @@
 const router = require('express').Router();
-// const { Daily, Trip } = require('../../models/index.Js');
-const { Daily, Trip } = require('../../models');
+const { Daily, Trip } = require('../../models/index');
+// const { Daily, Trip } = require('../../models');
 
 const withAuth = require('../../utils/auth');
 
