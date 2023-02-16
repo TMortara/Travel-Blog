@@ -1,6 +1,9 @@
 {
   "name": "travel-blog",
   "version": "1.0.0",
+  "engines": {
+    "node": "18.12.1"
+  },
   "description": "place to store your travels",
   "main": "server.js",
   "scripts": {
