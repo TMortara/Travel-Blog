@@ -175,7 +175,7 @@
  
  
  .login-card {
-   margin: 0 0 20px 0;
+   /* margin: 0 0 20px 0;
    flex: 0 0 50%;
    max-width: 30%;
    padding: 5px;
@@ -184,7 +184,26 @@
    border-style: double;
    border-width: thick;
    background-color: var(--light_blue);
-   color: black;  
+   color: black;   */
+   margin: 0 0 20px 0;
+   flex: 0 0 50%;
+   max-width: 40%;
+   padding: 2rem;
+   border: 3px solid #232D3D;
+   border-radius: var(--border-radius);
+   /* border-style: double; */
+   /* border-width: thick; */
+   /* background-color: #1F3C40; */
+   /* color: #232D3D; */
+   font-weight: bolder;
+ }
+#login-btn, #register-btn {
+  background-color: #BF9D36 !important;
+}
+
+ .page-title {
+  font-size: 2rem;
+  text-align: center;
  }
  
  
