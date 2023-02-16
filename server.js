@@ -4,7 +4,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 
 // Multer
-const multer = require('multer');
+// const multer = require('multer');
 const bodyparser = require('body-parser');
 
 // Initializes Sequelize with session store
