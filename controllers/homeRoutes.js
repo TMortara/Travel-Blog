@@ -1,5 +1,4 @@
 const router = require("express").Router();
-require("dotenv").config();
 const sequelize = require("../config/connection");
 const { Trip, User, Comment } = require("../models");
 
@@ -15,7 +14,7 @@ router.get("/", async (req, res) => {
           attributes: ['id','user_id','trip_id','comment_text','created_at'],
           include: {
             model: User,
-            attributes: ['username']
+            attributes: ['username'],
           }
         },
         {
@@ -43,11 +42,11 @@ router.get("/", async (req, res) => {
 router.get('/trip/:id', (req, res) => {
   Trip.findOne({
     where: {id: req.params.id},
-    attributes: ['id', 'location', 'created_at', 'trip_description'],
+    attributes: ['id','location','created_at','trip_description'],
     include: [
       {
         model: Comment,
-        attributes: ["id", "comment_text", "trip_id", "user_id", "created_at"],
+        attributes: ["id","comment_text","trip_id","user_id","created_at"],
         include: {
           model: User,
           attributes: ['username']
