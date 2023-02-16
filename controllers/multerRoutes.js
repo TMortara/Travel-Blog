@@ -11,7 +11,7 @@ const Trip = require('../models/Trip');
 // app.use(bodyparser.urlencoded({
 //     extended: true
 // }))
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.DB_MULTER;
 const storage = multer.diskStorage({
     destination: (req, file, cb) => { 
       cb(console.error(), path.join(__dirname, '../public/upload/'));
