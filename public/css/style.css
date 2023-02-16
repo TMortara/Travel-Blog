@@ -307,10 +307,30 @@
  }
 
  #create-trip-btn {
-  margin-top: 0.4rem;
-  
+  margin-top: 0.4rem;  
+  background-color:#BF9D36 !important;
+
  }
- 
+ #main-login-btn {
+  background-color: #BF9D36;
+  color: #fff;
+ }
+
+ #create-trip, #add-daily-form, #comment-btn {
+  background-color:#BF9D36 !important;
+ }
+
+#cancel, #save-trip-btn, #logout {
+  background-color: #3F404A !important;
+}
+
+ #-add-daily-btn {
+  background-color: #BF9D36 !important;
+ }
+
+ #delete-trip-btn {
+  background-color: #F15942;
+ }
  /* #trip-cards {
   display: flex;
   flex-direction: row;
