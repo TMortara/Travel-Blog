@@ -1,4 +1,4 @@
-const { Comment } = require('../models/Index');
+const { Comment } = require('../models/index.Js');
 
 /*
 mysql> select * from comment would look like...;

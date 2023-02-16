@@ -1,4 +1,4 @@
-const { User } = require('../models/Index');
+const { User } = require('../models/index.Js');
 
 /*
 mysql> select * from user;

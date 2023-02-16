@@ -1,4 +1,4 @@
-const { Trip } = require('../models/Index');
+const { Trip } = require('../models/index.Js');
 
 const tripdata = [
    {
