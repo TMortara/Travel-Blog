@@ -1,18 +1,11 @@
-<!--
-<h1>DASHBOARD</h1>
-
-<button id="get-trip">this trip</button>
-<button id="add-trip">add trip</button>
--->
-
     <!-- 
       If a logged-in user has posts, show them.
       If a logged-in user does not have a post, just show "create Post" button to create one.
       --> 
-    <div class="mb-5 pt-3">
+<div class="mb-5 pt-3">
       <a href="/dashboard/create/"><button id="create-trip" class="button is-link is-pulled-right">create trip</button></a>
         
-      <h2 class="title pb-4">Your dashboard: followings are your posts:</h2><hr>
+      <h2 id="dashboard-title" class="title pb-4">My Trips</h2><hr>
 {{#if trips.length}}
     </div>
 
