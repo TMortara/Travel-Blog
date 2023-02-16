@@ -98,4 +98,6 @@ If you have any questions, feel free to contact one of our team members via info
    + [Email:] jungwoo33@gmail.com
 + Koby Sillito:
 + Riley O'Bryan
+   + [GitHub:] https://github.com/rmob<br>
+   + [Email:] riley.obryan@gamil.com
 + Kaylon Myers

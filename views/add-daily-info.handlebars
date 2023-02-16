@@ -3,7 +3,7 @@
   <form class="add-daily-form">
     <div>
       <label for="date_created">Date:</label>
-      <input type="date_created" id="date_created" name="date_created" value="{{daily.date_created}}"/>
+      <input type="date" id="date_created" name="date_created" value="{{daily.date_created}}"/>
     </div>
     <div>
       <label for="places_visited">Where did you go today?</label>
@@ -25,7 +25,9 @@
       <button type="submit" name="image-upload" class="button" id="upload-here-btn"><a id="upload-a" href="/upload">Upload Here</a></button>
     </div>
     <div id="daily-btns">
-        <button type="submit" class="button is-link is-pulled-right" name="submit" id="submit">Submit</button>
+
+        <button type="submit" class="button is-link is-pulled-right" name="submit" id="add-daily-form">Submit</button>
+
         <button class="button is-link is-pulled-right" id="cancel"><a href="/dashboard" style="text-decoration:none; color: white">Cancel</a></button>
     </div>
 </article>
