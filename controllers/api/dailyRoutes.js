@@ -1,17 +1,16 @@
 const router = require('express').Router();
-const { Daily } = require('../../models/Index');
+const { Daily, Trip } = require('../../models/Index');
 const withAuth = require('../../utils/auth');
-
-router.get('/', (req, res) => {
-    res.render('daily')
-});
 
 router.post('/', withAuth, async (req, res) => {
     try {
 
     const newDailyLog = await Daily.create({
-        ...req.body,
+        date_created: req.body.date_created,
+        places_visited: req.body.places_visited,
+        daily_notes: req.body.daily_notes,
         user_id: req.session.user_id,
+        trip_id: req.body.trip_id,
     });
     res.status(200).json(newDailyLog);
     } catch (err) {

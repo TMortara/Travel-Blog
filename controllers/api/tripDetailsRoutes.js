@@ -41,12 +41,32 @@ router.get('/:id', withAuth, async (req, res) => {
     }
 });
 
-router.get('/:id/add-daily', (req, res) => {
+// router.get('/:id/add-daily', (req, res) => {
+//     try {
+//       res.render('add-daily-info');
+//     } catch (err) {
+//       res.status(400).json(err);
+//     }
+//   });
+
+  router.get('/:id/add-daily', withAuth, async (req, res) => {
     try {
-      res.render('add-daily-info');
+        
+        const dbTrip = await Trip.findByPk(req.params.id)
+        const trip = dbTrip.get({ plain: true });
+     
+        console.log(trip)
+        
+        res.render('add-daily-info', {
+            trip,
+            loggedIn: req.session.loggedIn,
+        });
+
     } catch (err) {
-      res.status(400).json(err);
+        console.log(err);
+        res.status(500).json(err);
     }
-  });
+});
+
 
 module.exports = router;
