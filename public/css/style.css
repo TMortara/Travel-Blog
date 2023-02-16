@@ -230,8 +230,12 @@
 }
 
 .single-trip{
-  padding-left: 30%;
-  padding-right: 30%;
+  width: 70%;
+  display: flex;
+  /* padding-left: 30%; */
+  /* padding-right: 30%; */
+  flex-direction: column;
+  margin: auto;
 }
 /*
 .subtitle{
@@ -245,7 +249,9 @@
    padding: 1%;
    margin-bottom: 0.2%;
    background-color: wheat;
-   margin: 20px;
+   /* margin: 20px; */
+   margin-left: 3%;
+   margin-right: 3%;
  }
  .comment .meta {
    font-size: 90%;
@@ -283,6 +289,7 @@
 
  #create-trip-btn {
   margin-top: 0.4rem;
+  
  }
  
  /* #trip-cards {
@@ -354,4 +361,8 @@
 
  .container {
   margin: 0 auto;
+ }
+
+ #comment-btn {
+  margin-top: 0.5rem;
  }
