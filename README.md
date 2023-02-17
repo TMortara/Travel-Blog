@@ -1,6 +1,7 @@
 # Wanderlust Travel Blog
 
 # Deployed Application
+https://quiet-everglades-33653.herokuapp.com/
 
 ## 1. Table of Contents
 
@@ -97,6 +98,35 @@ Also used to build this application:
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## 9. Screenshots
+### Homepage of Application
+![quiet-everglades-33653 herokuapp com_](https://user-images.githubusercontent.com/107971753/219549268-3918ab45-10a5-4b86-b782-70f33e30d0de.png)
+
+### Login Page - User will have to login to view Dashboard, create/edit/delete trips, or comment on trips
+![quiet-everglades-33653 herokuapp com_login](https://user-images.githubusercontent.com/107971753/219549400-a409989f-9b4f-4de2-ac24-f6dad1a1d824.png)
+
+### Register Page - User will have to register an account before accessing the Dashboard
+![quiet-everglades-33653 herokuapp com_signup](https://user-images.githubusercontent.com/107971753/219549575-9ee3d1a2-e847-4404-9154-e542893b8908.png)
+
+### Dashboard - Users will only see their trips and be able to create new trips, view trip details, edit their trip, or comment on the trip 
+![quiet-everglades-33653 herokuapp com_dashboard](https://user-images.githubusercontent.com/107971753/219549731-fbfdef6c-30de-4440-b7d0-386f04464520.png)
+
+### Edit or Delete Trip - From the Home or Dashboard page, Users can edit or delete an exisiting trip
+![Screen Shot 2023-02-16 at 10 36 39 PM](https://user-images.githubusercontent.com/107971753/219550513-0151db4c-428e-4730-9594-1cff09f50a20.png)
+
+### Comments - Users can view comments and comments on trips after logging in or registering
+![quiet-everglades-33653 herokuapp com_trip_5](https://user-images.githubusercontent.com/107971753/219549962-0464d8d4-6d30-4107-acc7-29796201cae6.png)
+
+### View Trip Details - Users can view trip details once logged in 
+![Screen Shot 2023-02-16 at 10 33 55 PM](https://user-images.githubusercontent.com/107971753/219550197-439b5418-245d-4233-a2e5-af5697119dc2.png)
+
+### Add Daily Trip Notes - Users can add daily trip notes and upload photos to their daily trip notes
+![quiet-everglades-33653 herokuapp com_api_trip-details_1_add-daily](https://user-images.githubusercontent.com/107971753/219550302-3bc41da1-9f70-4342-bdcb-ccaf87df7e21.png)
+
+![Screen Shot 2023-02-16 at 10 36 11 PM](https://user-images.githubusercontent.com/107971753/219550456-cf1bb2de-7f08-4d4b-9f80-c3d9e012d3a8.png)
+
+
+
+
 
 <img src="public\screenshots\travel-blog-homepage.png" width="400"/>
 
@@ -118,6 +148,7 @@ Also used to build this application:
 If you have any questions, feel free to contact one of our team members via information below:<br>
 
 - Tracy Mortara:
+  - [Github:] https://github.com/TMortara
 - Jungwoo Lee:
   - [GitHub:] https://github.com/jungwoo33<br>
   - [Email:] jungwoo33@gmail.com
