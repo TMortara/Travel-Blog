@@ -1,4 +1,4 @@
-const { Daily } = require('../models/index.Js');
+const { Daily } = require('../models/index.js');
 
 const dailydata = [
     {
