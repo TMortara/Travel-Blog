@@ -124,20 +124,6 @@ Also used to build this application:
 
 ![Screen Shot 2023-02-16 at 10 36 11 PM](https://user-images.githubusercontent.com/107971753/219550456-cf1bb2de-7f08-4d4b-9f80-c3d9e012d3a8.png)
 
-
-
-
-
-<img src="public\screenshots\travel-blog-homepage.png" width="400"/>
-
-<img src="public\screenshots\travel-blog-login.png" width="400" />
-
-<img src="public\screenshots\travel-blog-mytrips.png" width="400" />
-
-<img src="public\screenshots\travel-blog-trip-details.png" width="400" />
-
-<img src="public\screenshots\travel-blog-daily-notes.png" width="400" />
-
 ## 10. Credits
 
 - Torre for all the support in getting our application running.
