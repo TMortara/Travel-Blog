@@ -32,8 +32,9 @@ router.post("/", upload.single("image"), async (req, res) => {
   if (!req.file) {
     console.log("no file upload");
   } else {
-    const imgsrc =
-      "http://" +
+    const imgsrc = process.env.JAWSDB_URL 
+    ? "https://quiet-everglades-33653.herokuapp.com/upload/" + req.file.filename
+    : "http://" +
       process.env.DB_HOST +
       ":" +
       PORT +
