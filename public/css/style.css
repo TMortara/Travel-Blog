@@ -108,7 +108,7 @@
    min-height: 100vh;
    justify-content: flex-start;
    /* background-color: var(--quatrinary); */
-   background: url("/images/travelblog_bg-2000.png")
+   /* background: url("/images/travelblog_bg-2000.png") */
  }
  
  /* .trip {

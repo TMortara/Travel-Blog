@@ -1,5 +1,7 @@
 const router = require('express').Router();
-const { Daily, Trip } = require('../../models/Index');
+const { Daily, Trip } = require('../../models/index');
+// const { Daily, Trip } = require('../../models');
+
 const withAuth = require('../../utils/auth');
 
 //Post new daily notes to the Trip Details page
